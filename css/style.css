@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Montserrat:wght@500;600;700;800&display=swap");
+
+:root {
+  color-scheme: light;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #111;
+  background: #e8e6e1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --red: #c30d1b;
+  --blue: #123772;
+  --green: #006336;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background:
+    radial-gradient(ellipse at 50% 35%, #fff 0, #f0efeb 55%, #dfddd7 100%);
+}
+
+.page {
+  width: min(100%, 620px);
+  display: grid;
+  place-items: center;
+}
+
+.sign {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0;
+  overflow: hidden;
+  padding: clamp(15px, 4vw, 26px);
+  background: #f8f8f5;
+  border: 8px solid #eeede8;
+  box-shadow: 0 13px 28px #0002, 0 2px 5px #0002;
+}
+
+.sign__header {
+  padding: 3px 10px 0;
+  background: var(--red);
+  text-align: center;
+}
+
+.sign__header h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(3.2rem, 12vw, 6.2rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: 0.025em;
+}
+
+.sign__subtitle {
+  margin: 9px 0 0;
+  text-align: center;
+  font-size: clamp(0.76rem, 2.9vw, 1.38rem);
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.fire-class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.fire-class__letter {
+  margin-top: 4px;
+  color: var(--green);
+  font-family: Arial, sans-serif;
+  font-size: clamp(4.3rem, 12vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.fire-class__pictogram {
+  width: clamp(92px, 28vw, 112px);
+  margin-top: 5px;
+}
+
+.fire-class__pictogram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.fire-class__description {
+  margin: 10px 0 8px;
+  font-size: clamp(0.67rem, 2.2vw, 0.86rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.fire-class__description strong {
+  font-size: 1.07em;
+  font-weight: 800;
+}
+
+.instructions h2 {
+  margin: 4px 0 0;
+  color: var(--blue);
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: clamp(1.45rem, 5.7vw, 2.35rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.045em;
+  text-align: center;
+}
+
+.instructions ol {
+  margin: 4px 0 10px;
+  padding-left: 1.65em;
+  font-size: clamp(0.72rem, 2.5vw, 1rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.instructions li {
+  padding-left: 1px;
+}
+
+.bottom-bar {
+  min-height: clamp(100px, 25vw, 140px);
+  display: grid;
+  grid-template-columns: 1fr 1.12fr 1fr;
+  align-items: stretch;
+  justify-items: center;
+  gap: clamp(10px, 5vw, 32px);
+  padding: 0 2px 3px;
+}
+
+.bottom-bar__stripe {
+  width: 100%;
+  height: 100%;
+  background: var(--red);
+  transform: skew(-20deg);
+}
+
+.bottom-bar__stripe:first-child {
+  clip-path: polygon(0 0, 100% 0, 53% 100%, 0 100%);
+}
+
+.bottom-bar__stripe:nth-child(2) {
+  clip-path: polygon(25% 0, 100% 0, 76% 100%, 0 100%);
+}
+
+.bottom-bar__stripe:last-child {
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+@media (max-width: 380px) {
+  .sign {
+    border-width: 5px;
+    padding: 14px 11px;
+  }
+
+  .sign__subtitle {
+    font-size: 0.7rem;
+  }
+
+  .instructions ol {
+    padding-left: 1.45em;
+  }
+}

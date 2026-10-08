@@ -10,4 +10,8 @@ function reproducirAudio() {
   });
 }
 
-pictograma.addEventListener("click", reproducirAudio);
+pictograma.addEventListener("mouseenter", reproducirAudio);
+pictograma.addEventListener("mouseleave", () => {
+  audioPictograma.pause();
+  audioPictograma.currentTime = 0;
+});
